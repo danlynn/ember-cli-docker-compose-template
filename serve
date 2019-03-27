@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Note: Do not rename this script to "server" because 
+# it will conflict with 'ember serve' startup processing.
+
+echo
+
+docker-compose up
+
+echo
+echo
