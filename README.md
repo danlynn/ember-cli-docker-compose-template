@@ -2,14 +2,14 @@
 
 The docker-compose-template is a simple project stub that is useful for starting new ember project using docker and ember-cli.  It is made up of the following files:
 
-  ```
-  ember-project
-    docker-compose.yml
-    README-template.md
-    bash
-    ember
-    serve
-  ```
+```
+ember-project
+  docker-compose.yml
+  README-template.md
+  bash
+  ember
+  serve
+```
 
 The `docker-compose.yml` is configured to use the [danlynn/ember-cli](https://cloud.docker.com/u/danlynn/repository/docker/danlynn/ember-cli) docker image from dockerhub.
 
