@@ -21,7 +21,7 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
   Copy and run the following 3 lines in your terminal to create a new ember app named 'ember-project' and then host it on [http://locahost:4200](http://locahost:4200):
   
   ```bash
-    $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && ls -l
+    $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && mv README.md README-template.md && ls -l
     $ ./ember init
     $ ./serve
   ```
@@ -39,7 +39,7 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
   ```
   ember-project
     docker-compose.yml
-    README-ember-cli.md
+    README-template.md
     bash
     ember
     serve
@@ -126,6 +126,38 @@ Three super useful shell commands are included in the project directory: `./bash
   
   ember-project$
   ```
+
+
+## docker-compose.yml
+
+The `docker-compose.yml` file is setup as follows:
+
+```
+version: '2'
+
+services:
+  ember:
+    image: danlynn/ember-cli:latest
+    volumes:
+      - .:/myapp
+      - .bash_history:/root/.bash_history
+      - node_modules:/myapp/node_modules
+    tmpfs:
+      - /myapp/tmp
+    ports:
+      - "4200:4200"
+      - "7020:7020"
+      - "7357:7357"
+
+volumes:
+  node_modules:
+```
+
+Note that the `node_modules` directory is "volumized".  This means that the thousands upon thousands of tiny files are kept in a docker volume which provides about 10x the performance than if the that directory was shuttled back and forth to a host volume (like all the other source).  This is also why the `node_modules` directory looks blank to your host machine.
+
+If your IDE really, really needs to see the files in `node_modules` in order to work correctly, then you could simply remove the `- node_modules:/myapp/node_modules` line from the `docker-compose.yml` file.  This will cause a considerable performance penalty, however.
+
+The `tmp` directory is similarly setup in a special `tmpfs` volume.  This means that those files are cleared away after the container is stopped.  There is really no need to take up space persisting those files in your host filesystem or as a docker volume.
 
 
 ## Annihilation
