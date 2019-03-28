@@ -2,14 +2,14 @@
 
 The docker-compose-template is a simple project stub that is useful for starting new ember project using docker and ember-cli.  It is made up of the following files:
 
-    ```
-    ember-project
-      docker-compose.yml
-      README-template.md
-      bash
-      ember
-      serve
-    ```
+  ```
+  ember-project
+    docker-compose.yml
+    README-template.md
+    bash
+    ember
+    serve
+  ```
 
 The `docker-compose.yml` is configured to use the [danlynn/ember-cli](https://cloud.docker.com/u/danlynn/repository/docker/danlynn/ember-cli) docker image from dockerhub.
 
@@ -21,9 +21,9 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
   Copy and run the following 3 lines in your terminal to create a new ember app named 'ember-project' and then host it on [http://locahost:4200](http://locahost:4200):
   
   ```bash
-    $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && mv README.md README-template.md && ls -l
-    $ ./ember init
-    $ ./serve
+  $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && mv README.md README-template.md && ls -l
+  $ ./ember init
+  $ ./serve
   ```
 
 ## Slightly more detailed instructions:
@@ -31,10 +31,10 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
   Copy this ember-cli-docker-compose-template dir from github with the following command (replacing "ember-project" at the beginning with the name to use for the new project dir):
 
   ```bash
-     $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && ls -l
+  $ proj_dir='ember-project' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && ls -l
   ```
 
-  This creates the following directory structure and cd's into the new project directory:
+  This creates the following directory structure and cd's into the new project directory.  Note that the README.md was renamed to README-template.md so that it won't conflict with your project's README.md when you init a new ember project:
 
   ```
   ember-project
