@@ -9,6 +9,7 @@ ember-project
   bash
   ember
   serve
+  .bash_history
 ```
 
 The `docker-compose.yml` is configured to use the [danlynn/ember-cli](https://cloud.docker.com/u/danlynn/repository/docker/danlynn/ember-cli) docker image from dockerhub.
@@ -43,6 +44,7 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
     bash
     ember
     serve
+    .bash_history
   ```
 
   Verify that the "danlynn/ember-cli:latest" found in docker-compose.yml is using the ember version that you want to use.  Otherwise, change it to something like "danlynn/ember-cli:3.8.1".
@@ -68,7 +70,7 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
 
 Three super useful shell commands are included in the project directory: `./bash`, `./ember`, `./serve`.  These shortcut commands invoke their corresponding command within the ember docker container specified in the `docker-compose.yml` file.  Note that you MUST type the `./` in front of each command in order to invoke the shortcuts in the project directory instead of a corresponding command installed on your system.
 
-+ `./bash` - open a bash shell in the ember docker container where you can pretty much poke around and do anything you would normally do on the command line.  Just type `exit` or hit [ctrl-d] to exit the docker container shell and return to your local command line.
++ `./bash` - open a bash shell in the ember docker container where you can pretty much poke around and do anything you would normally do on the command line.  Note that the history of your bash commands get persisted back into your project's .bash_history file so that you can up-arrow to previous commands on subsequent invocations of the `./bash` shortcut.  Just type `exit` or hit [ctrl-d] to exit the docker container shell and return to your local command line.
 
   ```
   ember-project$ ./bash
