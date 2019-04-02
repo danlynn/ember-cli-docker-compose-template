@@ -17,6 +17,12 @@ The `docker-compose.yml` is configured to use the [danlynn/ember-cli](https://cl
 The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for performing the most common ember dev tasks.
 
 
+## Example Ember Octane app using this template
+
+  ![ember octane quick start guide tutorial](https://github.com/danlynn/ember-cli-docker-compose-template/blob/gh-pages/ember-cli-octane-demo-anim.gif?raw=true)
+
+  This example runs through the [Quick Start](https://octane-guides-preview.emberjs.com/release/getting-started/quick-start/) ember octane guide tutorial.  [Click here](https://github.com/danlynn/ember-cli-docker-compose-template/blob/gh-pages/ember-cli-octane-demo.mp4?raw=true) to view the video full-size.
+
 ## Quick start instructions:
 
   Copy and run the following 3 lines in your terminal to create a new ember app named 'ember-project' and then host it on [http://locahost:4200](http://locahost:4200):
@@ -163,7 +169,7 @@ The `tmp` directory is similarly setup in a special `tmpfs` volume.  This means 
 
 ## Annihilation
 
-In case you want to blow away ALL docker-related assets associated with this project (containers, images, volumes, etc) and start over, you can ***with great care*** execute the following:
+In case you want to blow away ALL docker-related assets associated with your project (containers, images, volumes, etc) and start over, you can ***with great care*** execute the following:
 
 ```
 $ docker-compose down -v --rmi all
