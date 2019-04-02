@@ -21,7 +21,10 @@ The `bash`, `ember`, and `serve` commands are [shortcuts](#shortcuts) for perfor
 
   ![ember octane quick start guide tutorial](https://github.com/danlynn/ember-cli-docker-compose-template/blob/gh-pages/ember-cli-octane-demo-anim.gif?raw=true)
 
-  This example runs through the [Quick Start](https://octane-guides-preview.emberjs.com/release/getting-started/quick-start/) ember octane guide tutorial.  [Click here](https://github.com/danlynn/ember-cli-docker-compose-template/blob/gh-pages/ember-cli-octane-demo.mp4?raw=true) to view the video full-size.
+  This example runs through the [Quick Start](https://octane-guides-preview.emberjs.com/release/getting-started/quick-start/) ember octane guide tutorial.
+  It follows the Quick Start instructions at [ember-cli-docker-compose-template](https://github.com/danlynn/ember-cli-docker-compose-template) for using the [danlynn/ember-cli](https://hub.docker.com/r/danlynn/ember-cli/) docker image.
+  
+  [Click here](https://danlynn.github.io/ember-cli-docker-compose-template/) to view the video full-size and with playback controls.
 
 ## Quick start instructions:
 
