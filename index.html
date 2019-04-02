@@ -18,5 +18,19 @@
       <a alt="ember-cli-docker-compose-template" href="https://github.com/danlynn/ember-cli-docker-compose-template">ember-cli-docker-compose-template</a> 
       for using the <a alt="danlynn/ember-cli" href="https://hub.docker.com/r/danlynn/ember-cli/">danlynn/ember-cli</a> docker image with docker-compose.
     </p>
+    <p>
+      The video above uses the following 3 commands to initially create a stub project with the <a alt="ember-cli-docker-compose-template" href="https://github.com/danlynn/ember-cli-docker-compose-template">ember-cli-docker-compose-template</a> template.
+      
+<pre>
+$ proj_dir='ember-quickstart' && curl -Ls https://github.com/danlynn/ember-cli-docker-compose-template/archive/master.zip > "$proj_dir.zip" && unzip -qq -j "$proj_dir.zip" -d "$proj_dir" && rm "$proj_dir.zip" && cd "$proj_dir" && mv README.md README-template.md && ls -l
+$ ./ember init
+$ ./serve
+</pre>
+
+      This first line will create a new directory named "ember-quickstart" populated with the contents of the ember-cli-docker-compose-template repo from github then cd into that directory ready to use.  
+      The last 2 lines are common commands that use the template's 'shortcuts' to run the ember command in the container and then start the ember server.
+    
+      A more detailed explanation of the project template stub, its features, and how to use it can be found in the project's <a alt="ember-cli-docker-compose-template" href="https://github.com/danlynn/ember-cli-docker-compose-template">README</a>
+    </p>
   </body>
 </html>
